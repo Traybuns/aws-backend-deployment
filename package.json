@@ -11,6 +11,8 @@
         "postbuild": "echo '#!/usr/bin/env node' | cat - dist/bin/my-backend.js > temp && mv temp dist/bin/my-backend.js && chmod +x dist/bin/my-backend.js"
     },
     "dependencies": {
+        "@aws-sdk/client-dynamodb": "^3.767.0",
+        "@aws-sdk/util-dynamodb": "^3.767.0",
         "aws-cdk-lib": "^2.184.1",
         "constructs": "^10.0.0",
         "source-map-support": "^0.5.21"
