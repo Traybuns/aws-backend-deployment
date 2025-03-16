@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "commonjs",
+      "lib": ["es2020"], // Removed "dom" since it's not needed for Node.js Lambda
+      "declaration": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "noImplicitThis": true,
+      "alwaysStrict": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": false,
+      "inlineSourceMap": true,
+      "inlineSources": true,
+      "experimentalDecorators": true,
+      "strictPropertyInitialization": false,
+      "typeRoots": ["./node_modules/@types"],
+      "outDir": "dist",
+      "rootDir": ".", // Ensures the directory structure is preserved in the output
+      "esModuleInterop": true, // Helps with importing CommonJS modules
+      "skipLibCheck": true // Skips type checking of declaration files for faster compilation
+    },
+    "include": [
+      "bin/**/*",
+      "lib/**/*",
+      "lambda/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "cdk.out",
+      "dist"
+    ]
+  }
